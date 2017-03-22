@@ -4,10 +4,12 @@
 */
 (function () {
   var vueDrag = {};
+  var edge = {};
   vueDrag.install = function (Vue) {
     Vue.directive('drag', {
       bind: function (el, binding, vnode) {
         var isChildDom;
+        edge = binding.value;
         if (binding.arg !== undefined) {
           // console.log(el.firstChild)
           isChildDom = true
@@ -40,6 +42,8 @@
           }
         }
         function move(e) {
+          if (e.pageX < edge.p1.left || e.pageY < edge.p1.top
+          || e.pageX > edge.p2.left || e.pageY > edge.p2.top) return;
           el.style.left = (e.pageX - offsetX) + 'px';
           el.style.top = (e.pageY - offsetY) + 'px';
         }
@@ -48,6 +52,9 @@
           removeEventListener('mouseup', up);
         }
         el.addEventListener('mousedown', down)
+      },
+      update(el, binding) {
+        edge = binding.value;
       }
     })
   }
