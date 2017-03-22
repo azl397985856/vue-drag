@@ -1,6 +1,6 @@
 {
-    "name": "vue-dragging",
-    "version": "1.0.6",
+    "name": "vuejs-drag",
+    "version": "1.0.0",
     "description": "a vue's Plug-in unit.it can realize any element any element to realize dragging",
     "main": "vue-drag.js",
     "scripts": {
@@ -8,12 +8,12 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/BosenY/vue-drag.git"
+        "url": "https://github.com/azl397985856/vue-drag"
     },
-    "author": "BosenY",
+    "author": "zhipenglu",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/BosenY/vue-drag/issues"
+        "url": "https://github.com/azl397985856/vue-drag/issues"
     },
-    "homepage": "https://github.com/BosenY/vue-drag#readme"
+    "homepage": "https://github.com/azl397985856/vue-drag#readme"
 }
