@@ -53,7 +53,7 @@
         }
         el.addEventListener('mousedown', down)
       },
-      update(el, binding) {
+      update:function(el, binding) {
         edge = binding.value;
       }
     })
